@@ -22,6 +22,7 @@ export default function Contacts({navigation}){
           Information...
         </Text>
       </View>
+
       <View style={{ marginTop: 20 }}>
         <Text>Nome: Amanda Silva</Text>
         <Text>Telefone: (14) 99493-9919</Text>
@@ -40,6 +41,15 @@ export default function Contacts({navigation}){
           Information...
         </Text>
       </View>
+     
+      <View style={{ marginTop: 20 }}>
+        <Text>Nome: Ally Silva</Text>
+        <Text>Telefone: (14) 99493-9919</Text>
+        <Text onPress={() => navigation.navigate("Information")}>
+          {" "}
+          Information...
+        </Text>
+        </View>
     </View>
   )
 }

@@ -2,8 +2,23 @@ import React from "react"
 import { View, Text } from "react-native"
 
 export default function Information({ route }) {
-  return (
+
+  const validation=()=>{
+   
+    if (!route.params){
+       return(
+        <View>
+          <Text>Não há dados cadastrados!</Text>
+        </View>
+       )
+    }
+    return null
+
+  }
+  return(
+  
     <View style={{ marginTop: 60 }}>
+      {validation()}
       <Text>Nome: {route.params?.nome}</Text>
       <Text>Telefone : {route.params?.telefone}</Text>
       <Text>Endereço: {route.params?.endereco}</Text>
@@ -11,5 +26,7 @@ export default function Information({ route }) {
       <Text>Profissao: {route.params?.profissao}</Text>
       <Text>Email: { route.params?.email}</Text>
     </View>
+   
+
   )
 }
