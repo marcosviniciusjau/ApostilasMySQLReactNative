@@ -32,8 +32,20 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="AppContacts" component={Tabs} />
-        <Stack.Screen name="Information" component={Information} />
+        <Stack.Screen
+          name="AppApostilas"
+          component={Tabs}
+          options={{
+            headerTitleStyle: { color: "#00FA9A" },
+          }}
+        />
+        <Stack.Screen
+          name="Information"
+          options={{
+            headerTitleStyle: { color: "#00FA9A" },
+          }}
+          component={Information}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
