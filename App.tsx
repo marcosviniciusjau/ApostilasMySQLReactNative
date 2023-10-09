@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 import Apostilas from "./src/pages/Apostilas"
-import Information from "./src/pages/Information/"
+import Information from "./src/pages/Information"
 import { Ionicons } from "@expo/vector-icons"
 
 const Stack = createStackNavigator()
@@ -16,7 +16,6 @@ function Tabs(){
       <Tab.Screen
         name="Apostilas"
         component={Apostilas}
-        styles={styles.names}
         options={{
           tabBarLabelStyle: { color: "#00FA9A" },
           tabBarIcon: ({ size }) => (
@@ -50,10 +49,3 @@ export default function App() {
     </NavigationContainer>
   )
 }
-import { StyleSheet } from "react-native"
-
-const styles = StyleSheet.create({
-  names:{
-  color: "#00FA9A",
-  }
-})
