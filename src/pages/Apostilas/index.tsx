@@ -23,18 +23,18 @@ export default function Apostilas({ navigation }) {
             console.error(
               'A resposta não é uma matriz de objetos com a propriedade "nome".'
             )
-            throw new Error("Resposta inválida")
+            throw new Error("Resposta no formato inválido")
           }
         })
         .catch((error) => {
-          console.error("Error fetching data:", error)
+          console.error("Erro de conexão:", error)
           throw error
         })
-    } catch (error) {
-      console.error("Erro no useEffect:", error)
-    }
-    console.log("Após a requisição")
-  }, [])
+        } catch (error) {
+          console.error("Erro no useEffect:", error)
+        }
+        console.log("Após a requisição")
+      }, [])
 
   return (
     <View style={styles.information}>
