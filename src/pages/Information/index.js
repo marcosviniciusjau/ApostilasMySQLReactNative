@@ -1,8 +1,7 @@
 import React from "react"
 import { View, Text } from "react-native"
-
+import styles from "./styles"
 export default function Information({ route }) {
-
   const validation=()=>{
    
     if (!route.params){
@@ -15,18 +14,12 @@ export default function Information({ route }) {
     return null
 
   }
-  return(
-  
-    <View style={{ marginTop: 60 }}>
+  return (
+    <View style={styles.information}>
       {validation()}
-      <Text>Nome: {route.params?.nome}</Text>
-      <Text>Telefone : {route.params?.telefone}</Text>
-      <Text>Endereço: {route.params?.endereco}</Text>
-      <Text>N: {route.params?.numero}</Text>
-      <Text>Profissao: {route.params?.profissao}</Text>
-      <Text>Email: { route.params?.email}</Text>
+      <Text style={styles.Text}>Nome: {route.params.nome}</Text>
+      <Text style={styles.Text}>R$: {route.params.valor}</Text>
+      <Text style={styles.Text}>Descrição: {route.params.descricao}</Text>
     </View>
-   
-
   )
 }
