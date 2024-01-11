@@ -2,7 +2,9 @@
 
 # dependencies
 node_modules/
-
+services/
+lib/
+context/
 # Expo
 .expo/
 dist/
