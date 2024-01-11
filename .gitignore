@@ -36,3 +36,4 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 src/pages/Contacts/api.tsx
+lib/api.tsx
